@@ -9,6 +9,7 @@
 Gopkg.lock
 Gopkg.toml
 go.sum
+logs
 
 # IDE files
 .idea/
