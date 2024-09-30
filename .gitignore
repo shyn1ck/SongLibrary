@@ -1,0 +1,30 @@
+# Go build files
+*.exe
+*.exe~
+*.out
+*.test
+
+# Dependency directories
+/vendor/
+Gopkg.lock
+Gopkg.toml
+go.sum
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# Environment variable files
+.env
+
+# Ignore specific config files
+configs/configs.json
+
+# Temporary files
+*.tmp
+*.bak
+
+# Coverage files
+*.cov
