@@ -13,6 +13,12 @@ func InitRoutes() *gin.Engine {
 	gin.SetMode(configs.AppSettings.AppParams.GinMode)
 	r.GET("/ping", PingPong)
 
+	auth := r.Group("/auth")
+	{
+		auth.POST("/sign-up", SignUp)
+		auth.POST("/sign-in", SignIn)
+	}
+
 	if err := r.Run(fmt.Sprintf("%s:%s", configs.AppSettings.AppParams.ServerURL, configs.AppSettings.AppParams.PortRun)); err != nil {
 		logger.Error.Fatalf("Error starting server: %v", err)
 	}
